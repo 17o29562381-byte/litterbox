@@ -1,0 +1,1 @@
+find -iregex ".*\.\(mp4\|wmv\|mov\flv\|mkv\rm\|m4v\|ts\|mpg\|mpeg\|avi\)" -exec HandBrakeCLI -i {} -e x264 -E opus -6 stereo -b 1024k --preset "Android 480p30" -Y 288 -o {}.avi \; -exec rm {} \; -exec tar zcvf {}.avi.tar.gz {}.avi \; -exec rm {}.avi \;  
