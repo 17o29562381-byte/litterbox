@@ -11,4 +11,5 @@ thanks
   -> find -iregex ".*\.\(mp4\|wmv\|mov\flv\|mkv\rm\|m4v\|ts\|mpg\|mpeg\|avi\)" -exec ffmpeg -hide_banner -loglevel error -hwaccel auto -i {} -vf scale=-2:288 -g 52 -c:v libx264 -maxrate:v 1024k -bufsize 1024k -c:a libopus -maxrate:a 128k -ar 48000 -ac 2 -f mp4 -movflags faststart -map 0:v:0 -map 0:a:0 {}.avi \; -exec rm {} \; -exec tar zcvf {}.avi.tar.gz {}.avi \; -exec rm {}.avi \;
   I had to modify the original source to make it work.  
 ❓ - Find original source to reference
+
 ❓ - Do something with script to make it cooler.  Hand editing is fine.
