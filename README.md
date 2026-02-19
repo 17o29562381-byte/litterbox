@@ -17,6 +17,7 @@ thanks
 ❓ - Do something with script to make it cooler.  Hand editing is fine.
 2-19-2026
   Not really a good place to put it but here are two bash script bits that unzip all the files in a directory and subdirectory and remove the zip file.  Good for working on VPS systems or local.
+  
   find -name "*.zip" -execdir unzip -o {} -d {}.unzip \; -exec rm {} \; 
 []
 find -name "*.zip" -execdir 7z x -y {} -o{}.unzip \; -exec rm {} \; 
