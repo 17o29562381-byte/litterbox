@@ -21,6 +21,7 @@ thanks
   find -name "*.zip" -execdir unzip -o {} -d {}.unzip \; -exec rm {} \;
   
 []
+
 find -name "*.zip" -execdir 7z x -y {} -o{}.unzip \; -exec rm {} \;
 
 []
